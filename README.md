@@ -7,7 +7,7 @@ The test is designed to give us a lot of the information we need to know about y
 
 ## Challenge Summary
 
-1. Write a Spark program that reads CVS files from a S3 bucket and stores data into a postgres database.
+1. Write a Spark program that reads CSV files from a S3 bucket and stores data into a postgres database.
  Path of S3 bucket should be accepted as an environment variable.
 Data in CSV contains loans information like loan amount, funded amount, loan grade, term etc.
 We need to filter out data in CSV before storing it:
@@ -20,8 +20,8 @@ We need to filter out data in CSV before storing it:
     
     d. If `credit score` is less than 700 filter out those records.
     
-2. We want to run this program on AWS EMR cluster, so write a program that spins up a cluster.
-You can refer this article how to run program on AWS. 
+2. We want to run this program on an AWS EMR cluster, so write a program that spins up a cluster.
+You can refer to this article how to run a program on AWS. 
 https://aws.amazon.com/emr/getting-started/
 
 
