@@ -7,7 +7,7 @@ The test is designed to give us a lot of the information we need to know about y
 
 ## Challenge Summary
 
-1. Write a Spark program that reads CSV files from a S3 bucket and stores data into a postgres database.
+1. Write a program that reads CSV files from a S3 bucket and stores data into a postgres database.  (We currently use Spark but you can use any framework you like).
  Path of S3 bucket should be accepted as an environment variable.
 Data in CSV contains loans information like loan amount, funded amount, loan grade, term etc.
 We need to filter out data in CSV before storing it:
@@ -20,9 +20,12 @@ We need to filter out data in CSV before storing it:
     
     d. If `credit score` is less than 700 filter out those records.
     
-2. We want to run this program on an AWS EMR cluster, so write a program that spins up a cluster.
+2.
+Option A: Configure this program to spin up on an AWS EMR cluster.
 You can refer to this article how to run a program on AWS. 
 https://aws.amazon.com/emr/getting-started/
+
+Option B: Containerize your application using a platform such as Docker (https://docs.docker.com/).  Extra credit if the containers can be scaled to run multiple applications at once. 
 
 
 ## Writing Clean, Scalable, and Well-tested Code
